@@ -1,3 +1,49 @@
+# moodle-docker for STACK developers
+
++ This repo is a fork of [moodlehq/moodle-docker](https://github.com/moodlehq/moodle-docker) adding a CAS (maxima) engine to support the [STACK](https://github.com/maths/moodle-qtype_stack) question type.
++ The CAS service is provided by the [mathinstitut/goemaxima](https://hub.docker.com/r/mathinstitut/goemaxima) docker image.
++ For documentation on the core features, please see the original documentation [moodlehq/moodle-docker](https://github.com/moodlehq/moodle-docker) below.
+
+## Quick Start for Manual Testing
+
+```bash
+# Set up path to Moodle code
+export MOODLE_DOCKER_WWWROOT=/path/to/moodle/code
+# Choose a db server (Currently supported: pgsql, mariadb, mysql, mssql, oracle)
+export MOODLE_DOCKER_DB=pgsql
+
+# Ensure customized config.php for the Docker containers is in place
+cp config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
+
+# Start up containers
+bin/moodle-docker-compose up -d
+
+# Wait for DB to come up (important for oracle/mssql)
+bin/moodle-docker-wait-for-db
+
+# Initialize Moodle database for manual testing
+bin/moodle-docker-compose exec webserver php admin/cli/install_database.php --agree-license --fullname="Docker moodle" --shortname="docker_moodle" --summary="Docker moodle site" --adminpass="test" --adminemail="admin@example.com"
+```
+
+At this point moodle should be running on [http://localhost/]().
+Note that https is not supported.
+
+## Configuring STACK 
+
+To use STACK, the following changes must be made to the configuration in
+Site Administration -> Plugins -> STACK.
+
+1.  Platform Type: Server
+2.  Maxima Version 5.44.0
+3.  URL of the Maxim Pool: http://maxima:8080/goemaxima
+
+## Shutting Down
+
+```bash
+# Shut down and destroy containers
+bin/moodle-docker-compose down
+```
+
 # moodle-docker: Docker Containers for Moodle Developers
 [![Build Status](https://github.com/moodlehq/moodle-docker/workflows/moodle-docker%20CI/badge.svg?branch=master)](https://github.com/moodlehq/moodle-docker/actions/workflows/ci.yml?query=branch%3Amaster)
 
