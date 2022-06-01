@@ -6,6 +6,13 @@
 
 ## Quick Start for Manual Testing
 
+To get started, 
+
+1.  Make a clone of the moodle repo.  The path to the working directory is called /path/to/moodle/code below.
+2.  Clone all the plugin repos that you need at appropriate locations in the moodle tree. 
+3.  Clone this repo 
+4.  Run the following from the top directory of the working directory (moodle-docker).
+
 ```bash
 # Set up path to Moodle code
 export MOODLE_DOCKER_WWWROOT=/path/to/moodle/code
