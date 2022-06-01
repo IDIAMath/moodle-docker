@@ -51,7 +51,7 @@ Site Administration -> Plugins -> STACK.
 bin/moodle-docker-compose down
 ```
 
-# moodle-docker: Docker Containers for Moodle Developers {#orig}
+# moodle-docker: Docker Containers for Moodle Developers <a name="orig"></a>
 [![Build Status](https://github.com/moodlehq/moodle-docker/workflows/moodle-docker%20CI/badge.svg?branch=master)](https://github.com/moodlehq/moodle-docker/actions/workflows/ci.yml?query=branch%3Amaster)
 
 This repository contains Docker configuration aimed at Moodle developers and testers to easily deploy a testing environment for Moodle.
