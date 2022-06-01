@@ -2,7 +2,7 @@
 
 + This repo is a fork of [moodlehq/moodle-docker](https://github.com/moodlehq/moodle-docker) adding a CAS (maxima) engine to support the [STACK](https://github.com/maths/moodle-qtype_stack) question type.
 + The CAS service is provided by the [mathinstitut/goemaxima](https://hub.docker.com/r/mathinstitut/goemaxima) docker image.
-+ For documentation on the core features, please see the original documentation [moodlehq/moodle-docker](https://github.com/moodlehq/moodle-docker) below.
++ For documentation on the core features, please see the original documentation [moodlehq/moodle-docker](https://github.com/moodlehq/moodle-docker) [below](#orig).
 
 ## Quick Start for Manual Testing
 
@@ -51,7 +51,7 @@ Site Administration -> Plugins -> STACK.
 bin/moodle-docker-compose down
 ```
 
-# moodle-docker: Docker Containers for Moodle Developers
+# moodle-docker: Docker Containers for Moodle Developers {#orig}
 [![Build Status](https://github.com/moodlehq/moodle-docker/workflows/moodle-docker%20CI/badge.svg?branch=master)](https://github.com/moodlehq/moodle-docker/actions/workflows/ci.yml?query=branch%3Amaster)
 
 This repository contains Docker configuration aimed at Moodle developers and testers to easily deploy a testing environment for Moodle.
