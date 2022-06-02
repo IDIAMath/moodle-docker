@@ -1,6 +1,14 @@
 #!/bin/sh
 
 
-MOODLE_DOCKER_PHP_VERSION=$1
-export MOODLE_DOCKER_PHP_VERSION
+if test ! "$MOODLE_DOCKER_PHP_VERSION"
+then
+   if test "$1"
+   then
+      MOODLE_DOCKER_PHP_VERSION=$1
+   else
+      MOODLE_DOCKER_PHP_VERSION=7.3
+   fi
+   export MOODLE_DOCKER_PHP_VERSION
+fi
 docker build -t stack-php-apache:$MOODLE_DOCKER_PHP_VERSION .
