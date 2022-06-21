@@ -37,6 +37,8 @@ bin/moodle-docker-compose exec webserver php admin/cli/install_database.php --ag
 
 At this point moodle should be running on [http://localhost/]().
 Note that https is not supported.
+This code is also found in the `quick.sh` script, which can be sourced using `. quick.sh` in 
+any Bourne shell compatible shell.
 
 ## Configuring STACK 
 

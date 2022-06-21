@@ -7,7 +7,7 @@ then
    then
       MOODLE_DOCKER_PHP_VERSION=$1
    else
-      MOODLE_DOCKER_PHP_VERSION=7.3
+      MOODLE_DOCKER_PHP_VERSION=7.4
    fi
    export MOODLE_DOCKER_PHP_VERSION
 fi
