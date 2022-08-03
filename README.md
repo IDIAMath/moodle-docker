@@ -49,6 +49,20 @@ Site Administration -> Plugins -> STACK.
 2.  Maxima Version 5.44.0
 3.  URL of the Maxim Pool: http://maxima:8080/goemaxima
 
+You should also run the health check.
+It may happen that STACK requires an upgrade to the the STACK-Maxima libraries.
+This will appear in the healt check under «Maxima version».
+Assuming that new versions of
+[mathinstitut/goemaxima](https://hub.docker.com/r/mathinstitut/goemaxima) 
+are published, the version can be changed in `base.yml`, in this section:
+```
+  maxima:
+      image: "mathinstitut/goemaxima:2022071300-latest"
+      tmpfs: "/tmp"
+```
+The number `2022071300` reflects the version of STACK-Maxima, and the healt check
+shows the number expected.
+
 ## Shutting Down
 
 ```bash
