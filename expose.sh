@@ -1,6 +1,8 @@
 export MOODLE_DOCKER_WWWROOT=../moodle
 export MOODLE_DOCKER_DB=pgsql
-export MOODLE_DOCKER_PHP_VERSION=8.0
+export MOODLE_DOCKER_WEB_PORT=0.0.0.0:8000
+export MOODLE_DOCKER_WEB_HOST=`hostname`
+
 
 # Ensure customized config.php for the Docker containers is in place
 \cp config.docker-template.php $MOODLE_DOCKER_WWWROOT/config.php
