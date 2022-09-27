@@ -40,6 +40,8 @@ Note that https is not supported.
 This code is also found in the `quick.sh` script, which can be sourced using `. quick.sh` in 
 any Bourne shell compatible shell.
 
+If remote use of moodle is required, i.e. not just from localhost, use instead the `expose.sh` script.
+
 ## Configuring STACK 
 
 To use STACK, the following changes must be made to the configuration in
