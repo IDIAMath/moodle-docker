@@ -1,7 +1,7 @@
 # This is a draft for a docker image adding yaml
 # to the standard moodle docker webserver.
 
-FROM moodlehq/moodle-php-apache:${MOODLE_DOCKER_PHP_VERSION:-7.4}
+FROM moodlehq/moodle-php-apache:${MOODLE_DOCKER_PHP_VERSION:-8.0}
 
 ADD ./assets/php.ini /usr/local/etc/php/
 

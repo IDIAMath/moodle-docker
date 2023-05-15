@@ -114,6 +114,7 @@ further information.
 This repository contains Docker configuration aimed at Moodle developers and testers to easily deploy a testing environment for Moodle.
 
 ## Features:
+
 * All supported database servers (PostgreSQL, MySQL, Micosoft SQL Server, Oracle XE)
 * Behat/Selenium configuration for Firefox and Chrome
 * Catch-all smtp server and web interface to messages using [Mailpit](https://github.com/axllent/mailpit)
