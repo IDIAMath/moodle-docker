@@ -31,5 +31,5 @@ services:
     volumes:
       - "${MOODLE_DOCKER_WWWROOT}:/var/www/html:ro"
   maxima:
-      image: "mathinstitut/goemaxima:2022071300-latest"
+      image: "mathinstitut/goemaxima:2023010400-latest"
       tmpfs: "/tmp"
