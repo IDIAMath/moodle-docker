@@ -1,8 +1,8 @@
 #!/bin/sh
 
 dir=$1
-test x$dir == x || dir=moodle-stack
-test -d "$dir" || dir=moodle-stack
+test x$dir == x && dir=moodle-stack
+test -d ../"$dir" || dir=moodle-stack
 echo Moodle directory: $dir
 port=$2
 test $port || port=8800
