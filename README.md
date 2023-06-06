@@ -42,6 +42,22 @@ any Bourne shell compatible shell.
 
 If remote use of moodle is required, i.e. not just from localhost, use instead the `expose.sh` script.
 
+### Scripts
+
+The above process has been coded up in the `moodle.sh` script.
+Please review the script for details.
+There is a corresponding `kill.sh` scriopt to stop and remove
+the docker containers completely.
+Assuming that the moodle installation is found as directory ../projectname,
+it can be called as
+```bash
+sh moodle.sh projectname [port]
+sh kill.sh projectname 
+```
+Note that the PHP version is hard-coded in the script, and may have to be changed
+if the Moodle version changes.  This is obviously not ideal.
+
+
 ## Configuring STACK 
 
 To use STACK, the following changes must be made to the configuration in
